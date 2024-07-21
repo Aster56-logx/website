@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 1rem;
+    flex-basis: calc(33.333% - 2rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    max-width: 100%;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 0.5rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive styling */
+@media (max-width: 900px) {
+    .gallery-item {
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .gallery-item {
+        flex-basis: calc(100% - 2rem);
+    }
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage with Images</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best service to our customers. Our team is highly skilled and passionate about their work.</p>
+        </section>
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="E:\OIP (1).jpeg"/300" alt="Gallery Image 1">
+                    <p>The sky is painted in rich hues of pink, purple, and orange, creating a dramatic and beautiful backdrop.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="E:\9c56230f42b04f0220e36ff923abb987.jpg"/300" alt="Gallery Image 2">
+                    <p>The sky is ablaze with rich shades of orange, yellow, and red as the sun sets, casting a warm glow across the horizon.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="E:\R.jpeg"/300" alt="Gallery Image 3">
+                    <p>A stunning, colorful sunset with vibrant shades of purple, pink, and orange.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

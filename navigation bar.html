@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: Aqua;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+#nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    #nav-list.show {
+        display: flex;
+    }
+    #nav-toggle {
+        display: block;
+    }
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="nav-toggle">☰</button>
+        </nav>
+    </header>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.getElementById('nav-list');
+
+    navToggle.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+});
+</script>
+</body>
+</html>
